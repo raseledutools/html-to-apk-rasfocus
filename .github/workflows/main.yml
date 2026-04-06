@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4  # এখানে v3 থেকে v4 করা হয়েছে
 
     - name: Build Project using CMake
       run: |
@@ -19,7 +19,7 @@ jobs:
         cmake --build . --config Release
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4  # এখানে v3 থেকে v4 করা হয়েছে
       with:
         name: RasFocus_Pro_App
         path: build\Release\RasFocus_Pro.exe
